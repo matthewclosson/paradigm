@@ -1,0 +1,207 @@
+<html>
+    <head>
+        <title>
+            checkbox
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .content {
+                width: 750px;
+                margin: 0 auto;
+            }
+
+            .header {
+                background: #ddedfa;
+                color: #1995e3;
+                font-weight: bold;
+                font-size: 40px;
+                text-transform: uppercase;
+                text-align: center;
+                padding: 14px 10px;
+            }
+
+            input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+            }
+            
+            .container {
+                display: inline-block;
+                width: 32%;
+                position: relative;
+                padding-left: 0;
+                margin-bottom: 12px;
+                cursor: pointer;
+                font-size: 22px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            .container input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+            }
+
+            .checkmark {
+                position: absolute;
+                top: 18px;
+                left: 18px;
+                height: 30px;
+                width: 30px;
+                background-color: #fff;
+            }
+
+            .container:hover input ~ .checkmark {
+                background-color: rgb(180, 241, 172);
+            }
+
+            .container input:checked ~ .checkmark {
+                background-color: rgb(58, 243, 33);
+            }
+
+            .checkmark:after {
+                content: "";
+                position: absolute;
+                display: none;
+            }
+
+            .container input:checked ~ .checkmark:after {
+                display: block;
+            }
+
+            .container .checkmark:after {
+                left: 11px;
+                top: 7px;
+                width: 5px;
+                height: 10px;
+                border: solid white;
+                border-width: 0 3px 3px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+
+            .checkbox-header {
+                background: #0498dd;
+                color: #fff;
+                text-transform: uppercase;
+                padding: 10px 0 10px 60px;
+                text-align: center;
+                font-weight: bold;
+            }
+
+            .checkbox-description {
+                background: #ddedfa;
+                color: #1c1c1c;
+                text-transform: uppercase;
+                font-size: 18px;
+                text-align: center;
+                padding: 18px 21px;
+                line-height: 1.4;
+            }
+        </style>
+    </head>
+    <body>
+            <div class="content">
+                <div class="header">
+                    <span style="text-transform:initial;font-weight:100;font-style:italic;font-size:24px;">The Penny Stock Letter</span><br />
+                    60% off summer special when you cash your "refund" today!
+                </div>
+                <label class="container" style="float:left;">
+                    <div class="checkbox-header">
+                        <span>Best Deal</span><br />
+                        <span style="font-size: 16px;font-style:italic;">Refund of $301</span>
+                    </div>
+                    <div class="checkbox-description">
+                        <span>$500 Regular Price</span><br />
+                        <span style="font-weight: bold;">You Pay $199</span><br />
+                        <span>For Lifetime</span></div>
+                    <input type="checkbox" id="best" checked/>
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container" style="margin-left:16px;">
+                    <div class="checkbox-header">
+                        <span>Great Deal</span><br />
+                        <span style="font-size: 16px;font-style:italic;">Refund of $301</span>
+                    </div>
+                    <div class="checkbox-description">
+                        <span>$500 Regular Price</span><br />
+                        <span style="font-weight: bold;">You Pay $199</span><br />
+                        <span>For Lifetime</span></div>
+                    <input type="checkbox" id="great" />
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container" style="float:right;">
+                    <div class="checkbox-header">
+                        <span>Good Deal</span><br />
+                        <span style="font-size: 16px;font-style:italic;">Refund of $301</span>
+                    </div>
+                    <div class="checkbox-description">
+                        <span>$500 Regular Price</span><br />
+                        <span style="font-weight: bold;">You Pay $199</span><br />
+                        <span>For Lifetime</span></div>
+                    <input type="checkbox" id="good" />
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+
+            <div class="content">   
+                <label class="container" style="float:left;">
+                    <div class="checkbox-header">
+                        <span>Best Deal</span><br />
+                        <span style="font-size: 16px;font-style:italic;">Refund of $301</span>
+                    </div>
+                    <div class="checkbox-description">
+                        <span>$500 Regular Price</span><br />
+                        <span style="font-weight: bold;">You Pay $199</span><br />
+                        <span>For Lifetime</span></div>
+                    <input type="checkbox" id="best" checked />
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container" style="margin-left:16px;">
+                    <div class="checkbox-header">
+                        <span>Great Deal</span><br />
+                        <span style="font-size: 16px;font-style:italic;">Refund of $301</span>
+                    </div>
+                    <div class="checkbox-description">
+                        <span>$500 Regular Price</span><br />
+                        <span style="font-weight: bold;">You Pay $199</span><br />
+                        <span>For Lifetime</span></div>
+                    <input type="checkbox" id="great" />
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container" style="float:right;">
+                    <div class="checkbox-header">
+                        <span>Good Deal</span><br />
+                        <span style="font-size: 16px;font-style:italic;">Refund of $301</span>
+                    </div>
+                    <div class="checkbox-description">
+                        <span>$500 Regular Price</span><br />
+                        <span style="font-weight: bold;">You Pay $199</span><br />
+                        <span>For Lifetime</span></div>
+                    <input type="checkbox" id="good" />
+                    <span class="checkmark" id="good"></span>
+                </label>
+            </div>
+
+        <script type="javascript">
+            $(document).ready(function () {
+                $('.container').click(function () {
+                    console.log('yay')
+                });
+            });
+        </script>
+    </body>
+</html>

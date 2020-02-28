@@ -1,0 +1,615 @@
+<html>
+<head>
+    <meta http-equiv="PRAGMA" content="NO-CACHE" />
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
+    <meta http-equiv="EXPIRES" content="NOW" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://d13p2xj50zkyqm.cloudfront.net/scripts/test/orderformtest.css">
+    <style>
+        body {
+            background: #fff;
+        }
+
+        div.contentwrapper {
+            margin-top: 0;
+            box-shadow: none;
+            border: none;
+            border-radius: 0;
+            max-width: 1064px;
+            width: 100%;
+            background: none;
+        }
+        .header {
+            background: url('https://paradigm.press/wp-content/themes/paradigmpress/img/bg.jpg');
+            background-size: cover;
+            height: 110px;
+        }
+        .header-container {
+            width: 1024px;
+            margin: 0 auto;
+            padding-top: 27px;
+            position: relative;
+        }
+        h1, h2, h3 {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        .top {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          padding: 0.5rem 0;
+        }
+        h2 {
+            font-family: Helvetica, Arial, sans-serif;
+            line-height: 1.2;
+        }
+        .logo {
+            width: auto;
+            margin: 0 auto;
+            display: block;
+        }
+        .timer {
+            width: auto;
+            margin: 0 auto;
+            display: block;
+        }
+        .number{
+          color: #fff;
+          font-size: 21px;
+          margin: 0 auto;
+          font-weight: bold;
+          line-height: 1.2;
+          text-align: center;
+        }
+        .order-by{
+          font-size: 12px;
+          font-weight: normal;
+          text-align: left;
+        }
+        a.tel,
+        a.tel:link,
+        a.tel:visited {
+          color:white;
+        }
+        a.tel:hover,
+        a.tel:focus,
+        a.tel:active {
+          color:#ccc;
+        }
+        div.background {
+            width: 998px;
+            margin: 0 auto;
+            margin-top: 35px;
+            padding-bottom:1em;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        div.testimonial {
+            clear: both;
+        }
+        .order_content {
+        }
+        #af_form_wrapper {
+            margin: 0 0 1% 0;
+            border-radius: 0;
+            position: absolute;
+            top: 5px;
+            right: 23px;
+            border-radius: 6px;
+            box-shadow: 0 0 30px #0000002b;
+            margin-top: 21px;
+            padding: 3px 16px;
+        }
+        .clickh {
+            color: #0000EE;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 2.5em;
+            text-decoration: underline;
+            margin-bottom: 0;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+        h3 {
+            text-transform: capitalize;
+        }
+        .bpdate{display:none;}
+        .larger {
+          font-size: 1.5rem;
+          text-align: center;
+          font-weight:bold;
+        }
+        .centered {
+          text-align:center;
+        }
+        .green {
+          color:#2D8E2D;
+        }
+        div.autorenew {
+          padding:0;
+          margin:0;
+          text-align:left;
+          height: 100px;
+          overflow: scroll;
+          border: 1px solid #ccc;
+          margin-bottom: 15px;
+        }
+        .show-for-one-column {
+          display: block;
+        }
+        .hide-for-one-column {
+          display: none;
+        }
+        h2#sign.form_headline {
+          border-top:0;
+        }
+        input[type="text"] {
+          width:100%;
+          border:1px solid #aaa;
+          border-radius:3px;
+          padding:0.25rem;
+          height: 37px;
+          font-size: 14px;
+          padding-left: 10px;
+          margin-bottom: 10px;
+        }
+        select {
+          padding:0.25rem;
+          max-width:100%;
+          height: 38px;
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+        /* Downsell */
+        h3.upsell_yes {
+            background-color: #82aa3c;
+            background: -moz-linear-gradient(top, #bee678 0%, #82aa3c 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bee678), color-stop(100%, #82aa3c));
+            background: -webkit-linear-gradient(top, #bee678 0%, #82aa3c 100%);
+            background: -o-linear-gradient(top, #bee678 0%, #82aa3c 100%);
+            background: -ms-linear-gradient(top, #bee678 0%, #82aa3c 100%);
+            background: linear-gradient(to bottom, #bee678 0%, #82aa3c 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bee678', endColorstr='#82aa3c', GradientType=0)
+        }
+        h3.upsell_yes:hover {
+            background: #bee678;
+        }
+        h3.upsell_no {
+            background-color: #ffaf64;
+            background: -moz-linear-gradient(top, #ffaf64 0%, #ff6400 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffaf64), color-stop(100%, #ff6400));
+            background: -webkit-linear-gradient(top, #ffaf64 0%, #ff6400 100%);
+            background: -o-linear-gradient(top, #ffaf64 0%, #ff6400 100%);
+            background: -ms-linear-gradient(top, #ffaf64 0%, #ff6400 100%);
+            background: linear-gradient(to bottom, #ffaf64 0%, #ff6400 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffaf64', endColorstr='#ff6400', GradientType=0)
+        }
+        h3.upsell_no:hover {
+            background: #ff6400;
+        }
+        /* END Downsell */
+
+        /* FAQ */
+        .faq {
+          text-align:left;
+        }
+        .moveSection {
+           padding-top: 1em;
+           padding-bottom: 1em;
+        }
+        .faqButton {
+           width: 5%;
+           float: left;
+           margin: 1em;
+           margin-top: -1em;
+        }
+        .questionSect:hover {
+           cursor: pointer;
+        }
+        .moveSection {
+           padding-top: 1em;
+           padding-bottom: 1em;
+        }
+        .answerSect {
+           background: none;
+           border: none;
+           display: none;
+           margin: 5em;
+           padding: 1rem;
+           -webkit-box-shadow: 0 0 10px 2px #CCC;
+           -moz-box-shadow:0 0 10px 2px #CCC;
+           box-shadow: 0 0 10px 2px #CCC;
+        }
+        .question {
+           margin-left: 2em;
+        }
+        .question p {
+           font-size: 2em;
+        }
+        .closeButton {
+           color: #fff;
+           width: 15%;
+           font-size: 1.5em;
+           margin: 0 auto;
+           background-color: darkred;
+           cursor: pointer;
+           padding: 1%;
+        }
+        h4 {
+           font-family: 'Helvetica Neue', Arial, sans-serif;
+           margin: 1.5em 1.25em;
+           font-weight: 700;
+           font-size: 2em;
+        }
+        .clickArea p {
+           font-weight: bold;
+        }
+
+        div.af_form_wrapper div.field_input {
+            width: 100%;
+        }
+
+        .timer {
+            background: #EFB130;
+            margin-top: 13px;
+            border-radius: 3px;
+            padding-top: 9px;
+            font-size: 19px;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        h2.form_headline {
+            margin: 1em 0 1em 0 !important;
+            font-weight: bold !important;
+            padding: 1em 0 0 0 !important;
+        }
+
+        .continue {
+            background: #2162DA;
+            width: 100%;
+            border-radius: 3px;
+            margin: 0;
+            margin-top: 15px;
+            color: #fff;
+            border: 0;
+            font-weight: 16px;
+            height: 38px;
+        }
+
+        .choiceName {
+            font-family: Helvetica Neue, Arial, sans-serif;
+            margin-top: 0 !important;
+        }
+
+        div.popsmoke {
+            background: #151515;
+        }
+
+        div.epcontent {
+            box-shadow: none;
+            border-radius: 4px;
+            height: 380px;
+        }
+
+        h3.upsell_yes {
+            margin-left: 17px;
+            margin-top: 5px;
+            background: none;
+            background-color: #b0e84d;
+            float: left;
+        }
+
+        h3.upsell_no {
+            margin-left: 17px;
+            margin-top: 5px;
+            background: none;
+            background-color: #ffa330;
+            float: left;
+        }
+
+        h3.upsell_yes,
+        h3.upsell_no {
+            width: 45%;
+            border: 0;
+            border-radius: 6px;
+            box-shadow: none;
+            display: inline-block;
+            font-size: 2em;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        /* END FAQ */
+
+        @media screen and (min-width:975px){
+          div.right_column {
+            width:33%;
+          }
+          .show-for-one-column {
+            display: none;
+          }
+          .hide-for-one-column {
+            display: block;
+          }
+        }
+        @media only screen and (max-width: 975px) {
+            .logo img {
+                margin: 0 auto;
+            }
+
+            .header-container {
+                width: 100%;
+            }
+            #af_form_wrapper {
+                position: initial;
+                box-shadow: none;
+            }
+
+            div.background {
+                width: 100%;
+            }
+
+            .timer {
+                margin: 0 40px 20px 40px;
+                text-align: center;
+            }
+        }
+        @media only screen and (max-width: 640px){
+          .hidebr{display:none;}
+          .answerSect {
+            padding:1em;
+            margin:1em;
+          }
+          .answerSect p.clickh {
+            font-size:1.25rem;
+          }
+          .hidebr{display:none;}
+          h2, .headline h2 {
+            font-size:1.5rem;
+          }
+          h3 {
+            font-size: 1.25rem;
+            line-height:1.2;
+          }
+          .larger {
+            font-size: 1.25rem;
+          }
+          ul, ol {
+            margin:0 1em 0 3em;
+          }
+          div.order_confirm {
+            margin:2em;
+          }
+          .number{
+            font-size: 25px;
+            margin: 20px 10px;
+            font-weight: bold;
+            line-height: 20px;
+            text-align: center;
+          }
+          .order-by{
+            font-size: 16px;
+            font-weight: normal;
+            text-align: center;
+          }
+          .logo img {
+              margin: 0 auto;
+          }
+          div.background {
+              border: 0;
+          }
+
+        }
+        @media only screen and (max-width: 359px){
+          div.af_form_wrapper div.field_wrapper {
+            margin: .5em;
+            width: 100%;
+            min-width: unset;
+          }
+          div.af_form_wrapper span.field_text {
+            display:inline;
+          }
+        }
+        p.choiceDescription,
+        p.autorenewMessage,
+        div.premiumMessage,
+        table.priceOption {
+            display:none;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- dependent name: PP_GTM -->
+    <@dependentContent id='1507833' />
+    <!-- /dependent name: PP_GTM -->
+
+
+    <!-- order.js -->
+    <@dependentContent id='1505649' />
+    <!-- / order.js -->
+    <!-- PP_cc_autodetect_css -->
+    <@dependentContent id='1506826' />
+    <!-- /PP_cc_autodetect_css -->
+
+    <script>
+        var imprint = "PP";
+    </script>
+
+    <!-- NEW EXIT POP -->
+    <script type="text/javascript">
+        domready(function () {
+            setTimeout(function() {
+            af_exit_pop({
+                    action: 'newOffer',
+                    href: 'https://orders.paradigm-press.info/tpt_potstocktrader_3M_0419/'
+                })
+                .fire(
+                    '<h1 style="font-size:6em; margin-top:-0.2em;margin-bottom: 10px;">Wait!</h1><p style="margin-top:-0.5em; text-align:center;"><strong class="red" style="font-size:1.5em;">Before You Go, Here is Something Else&hellip;</strong></p><p>If you aren’t ready to sign up to our full trial subscription, that’s OK!</p><p>Simply click the "3 Month Trial" button below to take advantage of a limited-time offer for 3 Full Months of <strong><em>Tim Sykes&rsquo; Pot Stock Trader</em></strong> for only $850.</p><p>Just click “STAY ON THIS PAGE” below to remain here and take more time to review our 1 year offer.</p><h3 class="upsell_yes"><a id="new_page" href="">3 Month Trial</a></h3><h3 class="upsell_no"><a href="">Stay on This Page</a></h3></div>'
+                );
+                }, 10000);
+        });
+    </script>
+
+    <div class="header">
+        <div class="header-container">
+            <div class="medium-6 columns">
+                <div class="logo">
+                    <img style="display: block;" src="https://d2z65klgtz99km.cloudfront.net/TPT/TPT_Header_300px_W.png" alt="Tim Sykes' Pot Stock Trader">
+                </div>
+            </div>
+            <div style="width: 35%; float: right; margin-top: -8px;">
+            <div class="number hide-for-small-only">
+                <span class="order-by">Order By Phone:</span><br />
+                <a class="tel" href="tel:+18442284648">1-844-228-4648</a>
+            </div>
+            </div><!-- / medium-4 -->
+        </div>
+    </div>
+    <div class="contentwrapper large_wrapper">
+
+    <div class="background">
+
+        <div class="order_content">
+            <!-- CONTENT GOES HERE -->
+        </div><!-- /.show-for-one-column -->
+
+        </div><!-- /.order_content -->
+
+    <div class="clear" style="clear:both;">&nbsp;</div>
+
+    <div class="hide-for-one-column">
+        <!-- HIDE FOR ONE COLUMN -->
+    </div><!-- /.hide-for-one-column -->
+
+    </div><!-- /.background -->
+    <div id="af_form_wrapper" class="af_form_wrapper right_column">
+        <div class="timer hide-for-small-only">
+            <script>
+            // set the timers end time
+            // miliseconds * minutes
+            var minute_timer_end = 60000 * 15;
+            </script>
+            Offer Ends: <span id="countdown"><span id="min">Minutes</span>:<span id="sec">Seconds</span></span>
+            
+            <!-- <form></form> goes here -->
+        </div><!-- /.af_form_wrapper -->
+    </div><!-- /.contentwrapper -->
+
+    <script>
+        $(document).ready(function () {
+
+            var right_column = $('div.right_column'),
+                right_couumn_hl = {};
+
+            if (right_column.length == 1) {
+                right_couumn_hl = right_column.find('h2.form_headline');
+                right_couumn_hl.eq(0).css('border', 'none');
+                right_couumn_hl.eq(0).css('padding-top', '0');
+            }
+
+        });
+    </script>
+
+    <script src="https://d13p2xj50zkyqm.cloudfront.net/scripts/order-2step_cookies.js"></script>
+
+    <script>
+    var input = document.getElementById('__billingEmailAddress__');
+    var eMail = Cookies.get('email');
+    $('#__billingEmailAddress__').val(eMail).click();
+    Cookies.remove('email');
+    </script>
+
+    <script>
+    function keepSessionAlive() {
+        $.get(window.location.href);
+    }
+    $(function () {
+        window.setTimeout("keepSessionAlive()", 1200000);
+    });
+    </script>
+
+
+    <script>
+        $('.clickh').click(function () {
+            $('html, body').animate({
+                scrollTop: $("#sign").offset().top
+            }, 50);
+            $('#sign').addClass('red');
+        });
+    </script>
+    <!-- =======  FAQ-SCRIPT  ======= -->
+    <script>
+        $(document).ready(function () {
+            $('head').append(
+                '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">')
+        });
+
+        $('.faqButton').html(
+            '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 21 21.2" enable-background="new 0 0 21 21.2" xml:space="preserve"><g id="Layer_1"><circle fill="#FFFFFF" stroke="#1B2E48" stroke-miterlimit="10" cx="10.5" cy="10.7" r="10"/></g><g id="Layer_2"><rect class="plus" x="9.2" y="5.4" width="2.6" height="10.4"/><rect x="5.3" y="9.3" width="10.4" height="2.6"/></g></svg>'
+        );
+        $('.clickArea').click(function () {
+            $('.plus').fadeIn();
+            $('.answerSect').slideUp();
+            if ($(this).parent().find('.answerSect').is(':hidden')) {
+                $(this).parent().find('.plus').fadeOut();
+                $(this).parent().find('.answerSect').slideDown();
+            } else {
+                $(this).parent().find('.plus').fadeIn();
+                $(this).parent().find('.answerSect').slideUp();
+            }
+
+        });
+    </script>
+    <!-- =======  END FAQ-SCRIPT  ======= -->
+
+    <script>
+    var hiddenCode = $('#promoCode').text(),
+    codes = ['WTPTV400','WTPTV401'];
+    for (var i = 0; i < codes.length; i++) {
+            if (codes[i] === hiddenCode) {
+                $('.bpdate').show();
+                af_exit_pop = false;
+            }
+        }
+    </script>
+
+
+    <!-- PP_cc_autodetect_js -->
+    <@dependentContent id='1506827' />
+    <!-- /PP_cc_autodetect_js -->
+
+    <script>
+    $('.choiceName input').change(function(){
+        if($('input:radio[id="qtr"]').is(':checked')) {
+        $('#qtrTerms').show();
+        $('#yrTerms').hide();
+        } else {
+        $('#yrTerms').show();
+        $('#qtrTerms').hide();
+        }
+    });
+    </script>
+    <script>
+        $( document ).ready(function() {
+        var url = window.location.pathname; 
+        console.log(url);
+        var numbers = {
+            'awn':'(800) 444-0001',
+            'rdl':'(800) 444-0002',
+            'ts1':'(800) 444-0003',
+            'tpt':'(800) 444-0004',
+            'opi':'(000) 000-0000'
+        }
+        url = url.split("/");
+        var pub = url[1].substring(0, 3);
+        var finalNumber = numbers[ pub ];
+        $(".phoneNumber").innerHTML(finalNumber);
+        /*var phoneNumber = document.getElementsByClassName( 'phoneNumber' );
+        phoneNumber.innerHTML = finalNumber;*/
+        });
+    </script>
+</body>
+</html>
